@@ -8,3 +8,16 @@
 - docker-compose-front.yml
 - Dockerfile-front
 - cychfront.conf
+
+### 3. 如果本機開發過，資料夾內會有 node_modules。
+如果不忽略它，Docker 會把本機裡的 node_modules 複製進去，
+導致建置時間變長而報錯。
+
+請在 Dockerfile 同一層目錄新增 .dockerignore：
+
+Plaintext
+node_modules
+dist
+.git
+.vscode
+nginx/logs
