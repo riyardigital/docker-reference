@@ -1,0 +1,23 @@
+name: cychfront
+
+services:
+  frontend:
+    container_name: cychfront-nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # 掛載 SSL 憑證
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      # 開發階段選用：如果想看 Log
+      - ./nginx/logs:/var/log/nginx
+    networks:
+      - appnet
+    restart: unless-stopped
+
+networks:
+  appnet:
+    external: true
