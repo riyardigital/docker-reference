@@ -24,7 +24,8 @@ nginx/logs
 
 ### 4. 因為要匯出PDF、EXCEL、壓縮檔
 請參考Dockerfile-back
-# [新增] libreoffice-writer: 核心轉檔軟體
-# [新增] default-jre-headless: LibreOffice 依賴的 Java 環境 (無 GUI 版)
-# [新增] fonts-noto-cjk: Google Noto CJK 字型 (解決中文亂碼/方塊字問題)
-# [新增] libzip-dev: Word/Excel/ZipArchive 依賴
+
+[新增] libreoffice-writer: 核心轉檔軟體
+[新增] default-jre-headless: LibreOffice 依賴的 Java 環境 (無 GUI 版)
+[新增] fonts-noto-cjk: Google Noto CJK 字型 (解決中文亂碼/方塊字問題)
+[新增] libzip-dev: Word/Excel/ZipArchive 依賴
